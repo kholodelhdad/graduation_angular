@@ -1,0 +1,29 @@
+
+.title{
+	 color: #00173B !important;
+  font-weight: 500 !important;
+   font-family: 'Rubik', sans-serif;
+}
+footer{
+      background-color: white !important;
+}
+
+.form-control:focus{
+	border: 1px solid #00173B;
+    box-shadow: 2px 2px  7px #EBEBEB;
+}
+.form-control{
+	font-size: smaller;
+	font-weight: 500;
+	color: #00173B !important;
+}
+.btn-yellow{
+   background-color: #F5C24C !important;
+   border: none;
+   font-size: smaller;
+   font-weight: 700;
+}
+.btn-yellow:hover{
+	background-color: #443298 !important;
+	color: #F5C24C !important;
+}

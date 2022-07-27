@@ -1,0 +1,97 @@
+.container{
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+.card{
+  border-color: #EBEBEB !important;
+  box-shadow: 3px 3px 15px 7px #EBEBEB;
+}
+
+.card-title{
+  color: #00173B !important;
+  font-weight: 500 !important;
+   font-family: 'Rubik', sans-serif;
+}
+.form-label{
+	color: #00173B !important;
+	font-size: smaller !important;
+	font-weight: 500 !important;
+}
+.form-control:focus{
+	border: 1px solid #00173B;
+    box-shadow: 2px 2px  7px #EBEBEB;
+}
+.form-control{
+	font-size: smaller;
+	font-weight: 500;
+	color: #00173B !important;
+}
+.btn-yellow{
+   background-color: #F5C24C !important;
+   border: none;
+   width: 100%;
+   font-size: smaller;
+   font-weight: 700;
+}
+.btn-yellow:hover{
+	background-color: #443298 !important;
+	color: #F5C24C !important;
+}
+.q{
+	font-size: smaller;
+	color: #00173B;
+	font-weight: 500;
+}
+.card-link{
+	text-decoration: none;
+	font-weight: 700;
+	color: #00173B;
+}
+.fs-6{
+	font-size: smaller !important;
+	color: #00173B;
+}
+hr{
+	color: #00173B !important;
+}
+.facebook{
+	color: #1A68D3;
+	border-color: #1A68D3 !important;
+}
+.google{
+	color: #D92D23;
+	border-color: #D92D23 !important;
+}
+.twitter{
+	color: #2D99DB;
+	border-color: #2D99DB !important;
+}
+.instagram{
+	color: #FF1493;
+	border-color: #FF1493 !important;
+}
+.facebook:hover{
+	background-color:#1A68D3 ;
+	color: white;
+}
+.google:hover{
+	color: white;
+	background-color: #D92D23;
+}
+.twitter:hover{
+  color: white;
+  background-color: #2D99DB ;
+}
+.instagram:hover{
+	color: white;
+	background-color: #FF1493 ;
+}
+.lost{
+	text-decoration: none;
+	color: #443298;
+	font-size: smaller;
+	font-weight: 500;
+}
+.lost:hover{
+	text-decoration: underline;
+}
