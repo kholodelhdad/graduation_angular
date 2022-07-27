@@ -1,88 +1,91 @@
-.container{
-	padding-top: 7rem;
-	padding-bottom: 7rem;
+.container-fluid {
+  background-color: #f4f5f7;
 }
-.card{
-  border-color: #EBEBEB !important;
-  box-shadow: 3px 3px 15px 7px #EBEBEB;
+.container {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.card {
+  border-color: #ebebeb !important;
+  box-shadow: 3px 3px 15px 7px #ebebeb;
 }
 
-.card-title{
-  color: #00173B !important;
+.card-title {
+  color: #00173b !important;
   font-weight: 500 !important;
-   font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-.form-label{
-	color: #00173B !important;
-	font-size: smaller !important;
-	font-weight: 500 !important;
+.form-label {
+  color: #00173b !important;
+  font-size: smaller !important;
+  font-weight: 500 !important;
 }
-.form-control:focus{
-	border: 1px solid #00173B;
-    box-shadow: 2px 2px  7px #EBEBEB;
+.form-control:focus {
+  border: 1px solid #00173b;
+  box-shadow: 2px 2px 7px #ebebeb;
 }
-.form-control{
-	font-size: smaller;
-	font-weight: 500;
-	color: #00173B !important;
+.form-control {
+  font-size: smaller;
+  font-weight: 500;
+  color: #00173b !important;
 }
-.btn-yellow{
-   background-color: #F5C24C !important;
-   border: none;
-   width: 100%;
-   font-size: smaller;
-   font-weight: 700;
+.btn-yellow {
+  background-color: #f5c24c !important;
+  border: none;
+  width: 100%;
+  font-size: smaller;
+  font-weight: 700;
 }
-.btn-yellow:hover{
-	background-color: #443298 !important;
-	color: #F5C24C !important;
+.btn-yellow:hover {
+  background-color: #443298 !important;
+  color: #f5c24c !important;
 }
-.q{
-	font-size: smaller;
-	color: #00173B;
-	font-weight: 500;
+.q {
+  font-size: smaller;
+  color: #00173b;
+  font-weight: 500;
 }
-.card-link{
-	text-decoration: none;
-	font-weight: 700;
-	color: #00173B;
+.card-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #00173b;
 }
-.fs-6{
-	font-size: smaller !important;
-	color: #00173B;
+.fs-6 {
+  font-size: smaller !important;
+  color: #00173b;
 }
-hr{
-	color: #00173B !important;
+hr {
+  color: #00173b !important;
 }
-.facebook{
-	color: #1A68D3;
-	border-color: #1A68D3 !important;
+.facebook {
+  color: #1a68d3;
+  border-color: #1a68d3 !important;
 }
-.google{
-	color: #D92D23;
-	border-color: #D92D23 !important;
+.google {
+  color: #d92d23;
+  border-color: #d92d23 !important;
 }
-.twitter{
-	color: #2D99DB;
-	border-color: #2D99DB !important;
+.twitter {
+  color: #2d99db;
+  border-color: #2d99db !important;
 }
-.instagram{
-	color: #FF1493;
-	border-color: #FF1493 !important;
+.instagram {
+  color: #ff1493;
+  border-color: #ff1493 !important;
 }
-.facebook:hover{
-	background-color:#1A68D3 ;
-	color: white;
-}
-.google:hover{
-	color: white;
-	background-color: #D92D23;
-}
-.twitter:hover{
+.facebook:hover {
+  background-color: #1a68d3;
   color: white;
-  background-color: #2D99DB ;
 }
-.instagram:hover{
-	color: white;
-	background-color: #FF1493 ;
+.google:hover {
+  color: white;
+  background-color: #d92d23;
+}
+.twitter:hover {
+  color: white;
+  background-color: #2d99db;
+}
+.instagram:hover {
+  color: white;
+  background-color: #ff1493;
 }
