@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategorypageComponent } from './categorypage/categorypage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TrackOrderComponent } from './track-order/track-order.component';
@@ -11,10 +12,12 @@ const routes: Routes = [
   { path: '', component: HomeHeaderComponent},
   { path: 'home', component: HomeHeaderComponent},
   { path: 'categorypage', component: CategorypageComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'track-order', component: TrackOrderComponent },
 { path: '**', component: NotFoundComponent },
+
 ];
 
 @NgModule({

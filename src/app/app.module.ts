@@ -14,6 +14,7 @@ import { CategoryNavbarComponent } from './category-navbar/category-navbar.compo
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TrackOrderComponent } from './track-order/track-order.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { TrackOrderComponent } from './track-order/track-order.component';
     CategorypageComponent,
     NotFoundComponent,
     TrackOrderComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
