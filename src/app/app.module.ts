@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +15,10 @@ import { CategoryNavbarComponent } from './category-navbar/category-navbar.compo
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AllproductsComponent } from './dashboard/allproducts/allproducts.component';
+import { HomeComponent } from './home/home.component';
+import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +32,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CategorypageComponent,
     NotFoundComponent,
     DashboardComponent,
+    AllproductsComponent,
+    HomeComponent,
+    AddproductComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule ,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

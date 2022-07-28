@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-allproducts',
+  templateUrl: './allproducts.component.html',
+  styleUrls: ['./allproducts.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class AllproductsComponent implements OnInit {
+
   products : Array<any> = [];
   constructor(private productsService :ProductsService) { }
 
@@ -19,4 +20,5 @@ export class DashboardComponent implements OnInit {
       console.log(data.data.products)
       });
   }
+
 }
