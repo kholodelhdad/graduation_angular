@@ -4,6 +4,7 @@ import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 import { AllproductsComponent } from './dashboard/allproducts/allproducts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditproductComponent } from './dashboard/editproduct/editproduct.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
       path: 'allproduct',
       component:AllproductsComponent,
     },
-    {path:'allproduct/addproduct',component:AddproductComponent}
+    {path:'allproduct/addproduct',component:AddproductComponent},
+    {path:'allproduct/edit/:id',component:EditproductComponent}
 
   ], },
   { path: '**', component: NotFoundComponent },

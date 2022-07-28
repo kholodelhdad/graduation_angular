@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-allproducts',
   templateUrl: './allproducts.component.html',
@@ -9,10 +9,11 @@ import { ProductsService } from 'src/app/services/products.service';
 export class AllproductsComponent implements OnInit {
 
   products : Array<any> = [];
-  constructor(private productsService :ProductsService) { }
+  constructor(private productsService :ProductsService,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getallproducts()
+
   }
   getallproducts(){
     this.productsService.getProductsList().subscribe((data : any) => {
@@ -20,5 +21,12 @@ export class AllproductsComponent implements OnInit {
       console.log(data.data.products)
       });
   }
+  deleteproduct(id: any){
+    this.productsService.deleteproduct(id).subscribe(data => {
+      this.getallproducts()
+      });
+
+  }
+  
 
 }
