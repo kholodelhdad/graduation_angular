@@ -13,6 +13,7 @@ import { CategoryNavbarComponent } from './category-navbar/category-navbar.compo
 
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CategoryNavbarComponent,
     CategorypageComponent,
     NotFoundComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
