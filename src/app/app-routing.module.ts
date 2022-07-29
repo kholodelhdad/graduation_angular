@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
+import { TrackOrderComponent } from './track-order/track-order.component';
 
 const routes: Routes = [
   { path: '', component: HomeHeaderComponent,
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'categorypage', component: CategorypageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
+  { path: 'track-order', component: TrackOrderComponent },
   ]},
   { path: 'dashboard', component: DashboardComponent,
   children: [

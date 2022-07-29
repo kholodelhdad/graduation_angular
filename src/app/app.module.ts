@@ -20,6 +20,7 @@ import { AllproductsComponent } from './dashboard/allproducts/allproducts.compon
 import { HomeComponent } from './home/home.component';
 import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 import { EditproductComponent } from './dashboard/editproduct/editproduct.component';
+import { TrackOrderComponent } from './track-order/track-order.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { EditproductComponent } from './dashboard/editproduct/editproduct.compon
     HomeComponent,
     AddproductComponent,
     EditproductComponent,
+    TrackOrderComponent,
   ],
   imports: [
     BrowserModule,
