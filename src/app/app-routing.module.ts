@@ -11,6 +11,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
 import { TrackOrderComponent } from './track-order/track-order.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AccountdetailsComponent } from './userprofile/accountdetails/accountdetails.component';
+import { ChpasswordComponent } from './userprofile/chpassword/chpassword.component';
+import { MyordersComponent } from './userprofile/myorders/myorders.component';
 
 const routes: Routes = [
   { path: '', component: HomeHeaderComponent,
@@ -20,6 +24,12 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'track-order', component: TrackOrderComponent },
+  { path: 'userprofile', component: UserprofileComponent,
+  children: [
+    {path: 'accountdetails',component:AccountdetailsComponent},
+    {path: 'chpassword',component:ChpasswordComponent},
+    {path: 'myorders',component:MyordersComponent},
+  ], }
   ]},
   { path: 'dashboard', component: DashboardComponent,
   children: [
@@ -31,6 +41,7 @@ const routes: Routes = [
     {path:'allproduct/edit/:id',component:EditproductComponent}
 
   ], },
+  
   { path: '**', component: NotFoundComponent },
 ];
 
