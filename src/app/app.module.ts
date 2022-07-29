@@ -21,6 +21,10 @@ import { HomeComponent } from './home/home.component';
 import { AddproductComponent } from './dashboard/addproduct/addproduct.component';
 import { EditproductComponent } from './dashboard/editproduct/editproduct.component';
 import { TrackOrderComponent } from './track-order/track-order.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AccountdetailsComponent } from './userprofile/accountdetails/accountdetails.component';
+import { ChpasswordComponent } from './userprofile/chpassword/chpassword.component';
+import { MyordersComponent } from './userprofile/myorders/myorders.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,10 @@ import { TrackOrderComponent } from './track-order/track-order.component';
     AddproductComponent,
     EditproductComponent,
     TrackOrderComponent,
+    UserprofileComponent,
+    AccountdetailsComponent,
+    ChpasswordComponent,
+    MyordersComponent,
   ],
   imports: [
     BrowserModule,
