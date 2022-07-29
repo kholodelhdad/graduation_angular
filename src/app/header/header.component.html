@@ -1,5 +1,6 @@
     <!--header-->
     <nav class="navbar mynav navbar-expand-lg">
+      hi {{username}}
         <div class="container bord px-5 py-1">
           <a class="navbar-brand title" href="#">Zeomart<span style="color: var(--secondarycolor);">.</span></a>
           <button class="navbar-toggler ms-auto mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +8,7 @@
           </button>
 
            <!--search-->
-           <form class="ms-5 d-flex w-100" role="search">
+           <form class="ms-5 d-flex w-100" role="search" >
             <div class="input-group row">
                <select class="form-select form-select1 ps-3 pe-0 col-2" style="width: 9rem;" aria-label="Default select example">
                    <option selected>All Categories</option>
@@ -21,7 +22,7 @@
            </form>
            <!--end of search-->
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav ms-2 mb-2 mb-lg-0 text-light">
               <li class="nav-item me-3 d-flex align-items-center">
                 <a href="#" class="text-light me-1"><i class="fa-regular fa-heart rounded "></i></a>
@@ -31,10 +32,10 @@
                 </div>
               </li>
               <li class="nav-item me-3 d-flex align-items-center">
-                <a routerLink="userprofile" class="text-light me-1"><i class="fa-regular fa-user rounded"></i></a>
+                <a routerLink="userprofile" class="text-light me-1" ><i class="fa-regular fa-user rounded"></i></a>
                 <div class="d-flex flex-column">
                     <a class="nav-link active text-light pb-0 fs-6" aria-current="page" routerLink="signin">Signin</a>
-                    <a class="nav-link active text-light pt-0 fs-7" aria-current="page" routerLink="register">Account</a>
+                    <a class="nav-link active text-light pt-0 fs-7" aria-current="page" *ngIf="isLogin" routerLink="register">Account</a>
                 </div>
               </li>
               <li class="nav-item me-3 d-flex align-items-center">

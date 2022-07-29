@@ -12,6 +12,9 @@ export class SigninComponent implements OnInit {
 login=new Login();
 email: string = ''
   password: string = ''
+  errorMessage:string ='';
+  flag:boolean  = false;
+  
   constructor(private registerService :RegisterService,private router: Router) { }
 
   ngOnInit(): void {
@@ -23,11 +26,16 @@ email: string = ''
     //  this.router.navigate(['/']);
       if(data.status === "success")
       {
-        console.log('h')
+        
+        this.registerService.saveCurrentUser(data.user.name , data.user.email , data.token);
+        this.registerService.loginuser(data.user)
+        this.router.navigate(['/']);  
         
       }
       else
-      {
+      {  this.flag = true;
+        this.errorMessage = data.message;
+        console.log(this.errorMessage)
         
       }
       });

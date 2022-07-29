@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-accountdetails',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accountdetails.component.css']
 })
 export class AccountdetailsComponent implements OnInit {
-
-  constructor() { }
+  logeduser:any={
+    name:'', 
+    email:'', 
+    phone:'',
+    address:''
+  }
+  constructor(private registerService :RegisterService) {
+    
+   }
 
   ngOnInit(): void {
+   this.logeduser= this.registerService.getloginuser()
+   console.log(this.logeduser)
   }
+
 
 }

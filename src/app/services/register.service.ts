@@ -1,17 +1,43 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { userData } from '../userData';
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
+  user:any
+  x:any
+  username:string = ''
+  logeduser:any
+  currentUsers =  new BehaviorSubject(null);
+  constructor(private http: HttpClient) { 
+    // if(localStorage.getItem('userData') != null){
+    //   this.x=localStorage.getItem('userData')
 
-  constructor(private http: HttpClient) { }
+    //   this.currentUsers.next(  JSON.parse(this.x)  )
+    // }
+  }
   insertdate(data: any):Observable<any>{
     return this.http.post('http://127.0.0.1:8000/api/register',data);
   }
   login(loginFormValue:any):Observable<any>{
     return this.http.post('http://127.0.0.1:8000/api/login',loginFormValue);
+  }
+  saveCurrentUser(name: string  , email: string , token: string)
+  {this.username= name 
+    this.user = new userData(name , email , token);
+
+    localStorage.setItem('userData' ,JSON.stringify(this.user) );
+    this.currentUsers.next(this.user);
+   
+  }
+  loginuser(user: any){
+   this.logeduser=user
+   
+  }
+  getloginuser(){
+    return this.logeduser
   }
 }
 

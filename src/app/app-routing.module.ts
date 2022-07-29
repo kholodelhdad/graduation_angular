@@ -15,6 +15,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AccountdetailsComponent } from './userprofile/accountdetails/accountdetails.component';
 import { ChpasswordComponent } from './userprofile/chpassword/chpassword.component';
 import { MyordersComponent } from './userprofile/myorders/myorders.component';
+import { AllcatogeryComponent } from './dashboard/allcatogery/allcatogery.component';
+import { AddcatogeryComponent } from './dashboard/addcatogery/addcatogery.component';
+import { EditcatogeryComponent } from './dashboard/editcatogery/editcatogery.component';
 
 const routes: Routes = [
   { path: '', component: HomeHeaderComponent,
@@ -38,8 +41,10 @@ const routes: Routes = [
       component:AllproductsComponent,
     },
     {path:'allproduct/addproduct',component:AddproductComponent},
-    {path:'allproduct/edit/:id',component:EditproductComponent}
-
+    {path:'allproduct/edit/:id',component:EditproductComponent},
+    {path:'allcatogery',component:AllcatogeryComponent},
+    {path:'allcatogery/edit/:id',component:EditcatogeryComponent},
+    {path:'allcatogery/addcatogery',component:AddcatogeryComponent}
   ], },
   
   { path: '**', component: NotFoundComponent },

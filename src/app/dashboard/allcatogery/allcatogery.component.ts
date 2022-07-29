@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CatogeryService } from '../services/catogery.service';
+import { CatogeryService } from 'src/app/services/catogery.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-allcatogery',
+  templateUrl: './allcatogery.component.html',
+  styleUrls: ['./allcatogery.component.css']
 })
-export class HomeComponent implements OnInit {
+export class AllcatogeryComponent implements OnInit {
   categories : Array<any> = [];
   constructor(private _CatogeryService:CatogeryService ) { }
 
@@ -18,5 +18,11 @@ export class HomeComponent implements OnInit {
       this.categories =data.data.categories ;
       console.log(data.data.categories)
       });
+  }
+  deletecategory(id: any){
+    this._CatogeryService.deletecategory(id).subscribe(data => {
+      this.getallcategories()
+      });
+
   }
 }

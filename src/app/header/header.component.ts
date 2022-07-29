@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../services/register.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isLogin:boolean =false;
+  username:string = ''
+  constructor(private _RegisterService:RegisterService ) { 
+  
+    _RegisterService.currentUsers.subscribe((data)=>{
 
-  constructor() { }
+      if(data != null)
+      {
+        this.isLogin = true;
+        this.username= _RegisterService.username
+      }
+      else
+      {
+        this.isLogin = false;
+      }
+
+     })
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,9 @@
 <div class="container m-0">
     <div class="section1 row">
       <div class="x col-3  ">
-        <ul class="">
-          <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Laptops</a></li>
-          <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Elctronics</a></li>
+        <ul class="" *ngFor="let  category of  categories ; let i = index">
+          <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">{{category.name}}</a></li>
+          <!-- <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Elctronics</a></li>
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Clothings</a></li>
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Health & beauty</a></li>
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Home & Kitchen</a></li>
@@ -14,7 +14,7 @@
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Home & Furniture</a></li>
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Grocery & Market</a></li>
           <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Toy & Video games</a></li>
-          <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Babies & Mom</a></li>
+          <li class="mb-1"><i class="fa-solid fa-laptop me-1"></i> <a href="#">Babies & Mom</a></li> -->
         </ul>
       </div>
       <div class="col-8">

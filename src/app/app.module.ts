@@ -25,6 +25,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AccountdetailsComponent } from './userprofile/accountdetails/accountdetails.component';
 import { ChpasswordComponent } from './userprofile/chpassword/chpassword.component';
 import { MyordersComponent } from './userprofile/myorders/myorders.component';
+import { AllcatogeryComponent } from './dashboard/allcatogery/allcatogery.component';
+import { AddcatogeryComponent } from './dashboard/addcatogery/addcatogery.component';
+import { EditcatogeryComponent } from './dashboard/editcatogery/editcatogery.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { MyordersComponent } from './userprofile/myorders/myorders.component';
     AccountdetailsComponent,
     ChpasswordComponent,
     MyordersComponent,
+    AllcatogeryComponent,
+    AddcatogeryComponent,
+    EditcatogeryComponent,
   ],
   imports: [
     BrowserModule,
