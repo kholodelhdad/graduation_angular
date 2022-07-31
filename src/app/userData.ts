@@ -3,7 +3,7 @@
 
 export class userData
 {
-    constructor(private first_name: string , private email: string , private token: string)
+    constructor(private id:number,private name: string , private email: string , private token: string, private address:string, private phone:string)
     {
 
     }

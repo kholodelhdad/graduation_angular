@@ -27,8 +27,8 @@ email: string = ''
       if(data.status === "success")
       {
         
-        this.registerService.saveCurrentUser(data.user.name , data.user.email , data.token);
-        this.registerService.loginuser(data.user)
+        this.registerService.saveCurrentUser(data.user.id,data.user.name , data.user.email , data.token,data.user.address,data.user.phone);
+        
         this.router.navigate(['/']);  
         
       }

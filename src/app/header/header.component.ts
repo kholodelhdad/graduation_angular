@@ -8,6 +8,7 @@ import { RegisterService } from '../services/register.service';
 })
 export class HeaderComponent implements OnInit {
   isLogin:boolean =false;
+  logeduser:any
   username:string = ''
   constructor(private _RegisterService:RegisterService ) { 
   
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
       if(data != null)
       {
         this.isLogin = true;
-        this.username= _RegisterService.username
+        // this.username= _RegisterService.username
       }
       else
       {
@@ -24,9 +25,14 @@ export class HeaderComponent implements OnInit {
       }
 
      })
+     this.logeduser= this._RegisterService.getloginuser()
+     console.log(this.logeduser)
+     this.username=this.logeduser.name;
+      console.log(this.username)
   }
 
   ngOnInit(): void {
+   
   }
 
 }

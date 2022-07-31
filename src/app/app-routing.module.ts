@@ -18,6 +18,7 @@ import { MyordersComponent } from './userprofile/myorders/myorders.component';
 import { AllcatogeryComponent } from './dashboard/allcatogery/allcatogery.component';
 import { AddcatogeryComponent } from './dashboard/addcatogery/addcatogery.component';
 import { EditcatogeryComponent } from './dashboard/editcatogery/editcatogery.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 const routes: Routes = [
   { path: '', component: HomeHeaderComponent,
@@ -27,7 +28,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'track-order', component: TrackOrderComponent },
-  { path: 'userprofile', component: UserprofileComponent,
+  { path: 'userprofile', component: UserprofileComponent, canActivate:[AuthGuardGuard],
   children: [
     {path: 'accountdetails',component:AccountdetailsComponent},
     {path: 'chpassword',component:ChpasswordComponent},

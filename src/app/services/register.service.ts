@@ -12,11 +12,12 @@ export class RegisterService {
   logeduser:any
   currentUsers =  new BehaviorSubject(null);
   constructor(private http: HttpClient) { 
-    // if(localStorage.getItem('userData') != null){
-    //   this.x=localStorage.getItem('userData')
-
-    //   this.currentUsers.next(  JSON.parse(this.x)  )
-    // }
+    if(localStorage.getItem('userData') != null){
+      this.x=localStorage.getItem('userData')
+    this.loginuser(JSON.parse(this.x))
+    console.log(this.logeduser)
+      this.currentUsers.next(  JSON.parse(this.x)  )
+    }
   }
   insertdate(data: any):Observable<any>{
     return this.http.post('http://127.0.0.1:8000/api/register',data);
@@ -24,9 +25,12 @@ export class RegisterService {
   login(loginFormValue:any):Observable<any>{
     return this.http.post('http://127.0.0.1:8000/api/login',loginFormValue);
   }
-  saveCurrentUser(name: string  , email: string , token: string)
-  {this.username= name 
-    this.user = new userData(name , email , token);
+  updateuser(id: any,data:any){
+    return this.http.put('http://127.0.0.1:8000/api/users/'+id,data);
+  }
+  saveCurrentUser(id:number,name: string  , email: string , token: string,address:string,phone:string)
+  {
+    this.user = new userData(id,name , email , token,address,phone);
 
     localStorage.setItem('userData' ,JSON.stringify(this.user) );
     this.currentUsers.next(this.user);
